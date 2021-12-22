@@ -1,12 +1,19 @@
+import Footer from '../shared/Footer'
+import Navbar from '../shared/Navbar'
+
 type Props = {
     children?: JSX.Element | JSX.Element[]
 }
 
-const FrontLayout = ({children}: Props) => {
+const FrontLayout = ({ children }: Props) => {
     return (
-        <div>
+        <>
+            <Navbar />
+            <div className='sm:pt-20 lg:pd-8'>
             {children}
-        </div>
+            </div>
+            <Footer />
+        </>
     )
 }
 
